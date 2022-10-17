@@ -1,5 +1,5 @@
 :root{
---DesaturatedRed: hsl(0, 36%, 70%);
+--DesaturatedRed: hsl(0, 46%, 90%);
 --SoftRed: hsl(0, 93%, 68%);
 --DarkGrayishRed: hsl(0, 6%, 24%);
 }
@@ -12,6 +12,11 @@ body{
 
 .container{
     width:100%;
+    
+}
+
+header{
+    margin:0;
 }
 
 .logo{
@@ -28,12 +33,20 @@ body{
     padding: 0;
 }
 
+section{
+    background-color: var(--DesaturatedRed);
+}
+
 .subHeader{
     text-align: center;
-    font-size: 48px;
-    color:var(--DesaturatedRed);
+    font-size: 64px;
+    color:var(--SoftRed);
     font-weight: 300;
-    margin:2rem 5rem;
+    margin:5rem 5rem;
+    letter-spacing: 7px;
+    line-height: 4rem;
+    
+
 }
 
 .black{
@@ -43,10 +56,27 @@ body{
 
 .text{
     text-align: center;
-    color: var(--DesaturatedRed);
-    margin: 5rem;
+    color: var(--SoftRed);
+    margin: 2rem 3rem 1rem 3rem;
+    font-size: 18px;
+    line-height: 2rem;
 }
 
 .cta{
     text-align: center;
+    padding: 2rem;
+    margin-bottom: 0;
+    color:var(--DesaturatedRed);
+}
+
+.email{
+    border-radius: 2rem;
+    padding:1rem;
+    background-color:var(--DesaturatedRed);
+    border:1px solid var(--SoftRed);
+}
+
+.submit{
+    border-radius: 2rem;
+    font-size: 32px;
 }
