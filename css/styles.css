@@ -1,7 +1,7 @@
 :root{
 --DesaturatedRed: hsl(0, 46%, 90%);
 --SoftRed: hsl(0, 93%, 68%);
---DarkGrayishRed: hsl(0, 6%, 24%);
+--DarkGrayishRed: hsl(0, 27%, 69%);
 }
 
 body{
@@ -40,13 +40,11 @@ section{
 .subHeader{
     text-align: center;
     font-size: 64px;
-    color:var(--SoftRed);
+    color:var(--DarkGrayishRed);
     font-weight: 300;
     margin:5rem 5rem;
     letter-spacing: 7px;
     line-height: 4rem;
-    
-
 }
 
 .black{
@@ -56,27 +54,95 @@ section{
 
 .text{
     text-align: center;
-    color: var(--SoftRed);
+    color: var(--DarkGrayishRed);
     margin: 2rem 3rem 1rem 3rem;
     font-size: 18px;
     line-height: 2rem;
 }
 
-.cta{
-    text-align: center;
-    padding: 2rem;
-    margin-bottom: 0;
+.btn{
+    border: 0px solid var(--DesaturatedRed);
+    width: 100px;
     color:var(--DesaturatedRed);
-}
-
-.email{
+    background: var(--SoftRed);
     border-radius: 2rem;
-    padding:1rem;
+    font-size: 65px;
+}  
+
+.cta{
+    /* This bit sets up the horizontal layout */
+    display:flex;
+    flex-direction:row;
+    /* This bit draws the box around it */
+    border:1px solid var(--DarkGrayishRed);
+    /* I've used padding so you can see the edges of the elements. */
+    padding:0px;
+    border-radius: 2rem;
+    margin:1rem 3rem;
+  }
+  .email{
+    /* Tell the input to use all the available space */
+    flex-grow:2;
+    /* And hide the input's outline, so the form looks like the outline */
+    border:none;
     background-color:var(--DesaturatedRed);
-    border:1px solid var(--SoftRed);
-}
-
-.submit{
+    padding:0px;
     border-radius: 2rem;
-    font-size: 32px;
-}
+  }
+  
+  .email:focus {
+    /* removing the input focus blue box. Put this on the form if you like. */
+    outline: none;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: var(--DarkGrayishRed);
+    opacity: 1; 
+    padding:0 1rem;/* Firefox */
+    font-size:24px;
+  }
+
+  @media screen and (min-width:1000px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "logo pic"
+        "subheader pic"
+        "bodyText pic"
+        "cta pic";
+    }
+
+    .logo{
+        grid-area: logo;
+    }
+
+    .subHeader{
+        grid-area: subheader;
+    }
+
+    .text{
+        grid-area: bodyText;
+    }
+
+    .cta{
+        grid-area: cta;
+    }
+     
+    .cutie{
+        grid-area: pic;
+        background-image: url("images/hero-desktop.jpg");
+    }
+
+
+  }
+
+
+
+
+
+
+   
+
+
