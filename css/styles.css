@@ -21,20 +21,24 @@ header{
 
 .logo{
     margin:2rem 1rem;
-
 }
 
-.image{
-    
+.imgBox{
+    width: 100%;
 }
 
 .hero{
-    width:100%;
-    margin: 0;
-    padding: 0;
-    background: url("../images/hero-mobile.jpg");
+    width: 100%;
 }
-
+/*.hero{
+    background-color: #000000;
+    background: url("../images/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height:675px;
+}
+*/
 section{
     background-color: var(--DesaturatedRed);
     padding-bottom: 2rem;
@@ -114,20 +118,20 @@ section{
         grid-template-areas: 
         "logo pic"
         "body pic";
+        background-color: var(--DesaturatedRed);
+        
     }
 
     .logo{
         grid-area: logo;
     }
+
     section{
         grid-area: body;
     }
     
-    .hero{
+    .imgBox{
         grid-area: pic;
-        background-image: url("../images/hero-desktop.jpg");
-        background-repeat: no-repeat;
-        height: 100%;
     }
 
 
