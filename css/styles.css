@@ -124,26 +124,39 @@ section{
 
     .logo{
         grid-area: logo;
-        padding:2.5rem 0rem 0rem 5rem;
+        padding:2.5rem 0rem 0rem 3.5rem;
         align-self: center;
+    }
+
+    .topLogo{
+        width: 35%;
     }
 
     section{
         grid-area: body;
         text-align: left;
+        margin-top: -12rem;
     }
     .subHeader{
         text-align: left;
-        padding: 0rem 2rem 2rem 0rem;
+        padding: 0rem 15rem 2rem 1rem;
+        font-size: 84px;
+        line-height: 7rem;
     }
 
     .text{
         text-align: left;
+        padding:1rem 5rem 0rem 2.5rem;
     }
     
     .imgBox{
         grid-area: pic;
+    }
 
+    .cta{
+        margin-top:5rem;
+        margin-left: 5rem;
+        margin-right: 7rem;
     }
 
 
