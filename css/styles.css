@@ -15,10 +15,6 @@ body{
 
 }
 
-header{
-    margin:0;
-}
-
 .logo{
     margin:2rem 1rem;
 }
@@ -30,15 +26,7 @@ header{
 .hero{
     width: 100%;
 }
-/*.hero{
-    background-color: #000000;
-    background: url("../images/hero-mobile.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    height:675px;
-}
-*/
+
 section{
     background-color: var(--DesaturatedRed);
     padding-bottom: 2rem;
@@ -77,40 +65,63 @@ section{
     font-size: 65px;
 }  
 
+.btn:hover{
+    background-color: var(--DesaturatedRed);
+    border:1px solid var(--SoftRed);
+}
+
+.arrow{
+    padding-bottom: .5rem;
+    padding-top: .75rem;
+    width:20%
+}
+
+.emailError{
+    color:red;
+    margin-left: 6rem;
+    margin-top: 0;
+    font-size:14px;
+}
+
 .cta{
     /* This bit sets up the horizontal layout */
     display:flex;
     flex-direction:row;
     /* This bit draws the box around it */
-    border:1px solid var(--DarkGrayishRed);
+    border:1px solid var(--SoftRed);
     /* I've used padding so you can see the edges of the elements. */
     padding:0px;
     border-radius: 2rem;
-    margin:1rem 3rem;
-  }
-  .email{
+    margin:1rem 3rem .5rem 3rem;
+}
+
+.email{
     /* Tell the input to use all the available space */
     flex-grow:2;
     /* And hide the input's outline, so the form looks like the outline */
     border:none;
     background-color:var(--DesaturatedRed);
-    padding:0px;
+    padding-left:1rem;
     border-radius: 2rem;
-  }
+    font-size: 18px;
+    color:var(--SoftRed);
+}
   
-  .email:focus {
+.email:focus {
     /* removing the input focus blue box. Put this on the form if you like. */
     outline: none;
-  }
+}
 
-  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: var(--DarkGrayishRed);
     opacity: 1; 
     padding:0 1rem;/* Firefox */
     font-size:24px;
-  }
+}
 
-  @media screen and (min-width:1000px){
+/* MEDIA QUERY */
+
+@media screen and (min-width:1000px){
     .container{
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -160,7 +171,7 @@ section{
     }
 
 
-  }
+}
 
 
 
