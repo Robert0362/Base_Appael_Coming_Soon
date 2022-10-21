@@ -10,11 +10,11 @@ function handleTabletChange(e) {
     if (e.matches) {
       // Then log the following message to the console
         console.log('Media Query Matched!')
-        heroPic.src = '/images/hero-mobile.jpg';
+        heroPic.src = 'images/hero-mobile.jpg';
     }
     else{
         console.log('Big Screen')
-        heroPic.src = '/images/hero-desktop.jpg';
+        heroPic.src = 'images/hero-desktop.jpg';
     }
   }
 
